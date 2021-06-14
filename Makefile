@@ -1,5 +1,7 @@
-PLUGIN_NAME = mikebarkmin/glusterfs
-PLUGIN_TAG ?= next
+include .env
+
+CLUSTER_IP=10.42.5.15
+CLUSTER_VOLNAME=gv1
 
 all: clean rootfs create
 

@@ -1,4 +1,4 @@
-module github.com/mikebarkmin/docker-volume-glusterfs
+module github.com/urbitechsro/docker-volume-glusterfs
 
 go 1.16
 

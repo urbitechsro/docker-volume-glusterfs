@@ -1,4 +1,6 @@
 FROM golang:1.16 as builder
+COPY . /go/src/github.com/urbitechsro/docker-volume-glusterfs
+WORKDIR /go/src/github.com/urbitechsro/docker-volume-glusterfs
 RUN go mod vendor
 RUN go install --ldflags '-extldflags "-static"'
 CMD ["/go/bin/docker-volume-glusterfs"]
