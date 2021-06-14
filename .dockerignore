@@ -1,0 +1,25 @@
+# VS-Code
+.vscode
+
+# CI-CD
+.github
+.travis
+
+# Git
+.gitignore
+.travis.yml
+
+# App
+README.md
+
+
+#####
+*
+
+!go.*
+!*.go
+!LICENSE
+!Dockerfile
+!config.json
+!plugin
+!tests
