@@ -30,6 +30,18 @@ enable:
 	@echo "### enable plugin ${PLUGIN_NAME}:${PLUGIN_TAG}"		
 	@docker plugin enable ${PLUGIN_NAME}:${PLUGIN_TAG}
 
+test:
+	@docker rm -f gfs-test-container
+	@docker volume rm -f gfstest
+	@docker volume create -d ${PLUGIN_NAME}:${PLUGIN_TAG} -o servers=${CLUSTER_IP} -o volname=${CLUSTER_VOLNAME} gfstest
+	docker run -v gfstest:/data -it --name gfs-test-container bash bash || exit 0
+	@docker rm -f gfs-test-container
+	@docker volume rm -f gfstest
+
+disable:		
+	@echo "### disable plugin ${PLUGIN_NAME}:${PLUGIN_TAG}"		
+	@docker plugin disable -f ${PLUGIN_NAME}:${PLUGIN_TAG}
+
 push:  clean rootfs create enable
 	@echo "### push plugin ${PLUGIN_NAME}:${PLUGIN_TAG}"
 	@docker plugin push ${PLUGIN_NAME}:${PLUGIN_TAG}
