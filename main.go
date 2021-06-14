@@ -16,6 +16,7 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/go-plugins-helpers/volume"
+	"github.com/sirupsen/logrus"
 )
 
 const socketAddress = "/run/docker/plugins/glusterfs.sock"
