@@ -270,7 +270,23 @@ func (d *glusterfsDriver) mountVolume(v *glusterfsVolume) error {
 	logrus.Debug(cmd.Args)
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		return logError("glusterfs command execute failed: %v (%s)", err, output)
+		// This is possible log destination:
+		// /mnt/volumes/9b107c9caaefc8fdcf850e262c5f2964/083281b805094eaf2063013d6b51dadd
+		//
+		// This is its log:
+		// mnt-volumes-9b107c9caaefc8fdcf850e262c5f2964-083281b805094eaf2063013d6b51dadd.log
+		//
+		// From this we can draw an assumption that all logs will be in this format.
+		// If not, then we act safely
+
+		logName := filepath.Join("/var/log/glusterfs/", strings.Trim(strings.ReplaceAll(v.Mountpoint, "/", "-"), "-")+".log")
+		logData, logErr := os.ReadFile(logName)
+		if logErr == nil {
+			// Clean the log file, because we don't want to be spamming with repeated data
+			os.WriteFile(logName, []byte(""), 0660)
+			return logError("glusterfs command execute failed: %v (%s) \n%s", err, output, logData)
+		}
+		return logError("glusterfs command execute failed: %v (%s) Unable to fetch log data %s because %v", err, output, logName, logErr)
 	}
 
 	var subdir = filepath.Join(v.Mountpoint, v.Subdir)
