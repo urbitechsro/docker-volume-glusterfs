@@ -8,7 +8,7 @@ This is a managed Docker volume plugin to allow Docker containers to access
 GlusterFS volumes. The GlusterFS client does not need to be installed on the
 host and everything is managed within the plugin.
 
-[![TravisCI](https://travis-ci.org/urbitechsro/docker-volume-glusterfs.svg)](https://travis-ci.org/urbitechsro/docker-volume-glusterfs) [![Go Report Card](https://goreportcard.com/badge/github.com/urbitechsro/docker-volume-glusterfs)](https://goreportcard.com/report/github.com/urbitechsro/docker-volume-glusterfs) ![Docker Pulls](https://img.shields.io/docker/pulls/urbitechsro/glusterfs) ![Docker Stars](https://img.shields.io/docker/stars/urbitechsro/glusterfs)
+[![Go Report Card](https://goreportcard.com/badge/github.com/urbitechsro/docker-volume-glusterfs)](https://goreportcard.com/report/github.com/urbitechsro/docker-volume-glusterfs) ![Docker Pulls](https://img.shields.io/docker/pulls/urbitechsro/glusterfs) ![Docker Stars](https://img.shields.io/docker/stars/urbitechsro/glusterfs)
 
 ## Usage
 
