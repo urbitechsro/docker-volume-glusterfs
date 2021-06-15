@@ -8,20 +8,20 @@ This is a managed Docker volume plugin to allow Docker containers to access
 GlusterFS volumes. The GlusterFS client does not need to be installed on the
 host and everything is managed within the plugin.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/urbitechsro/docker-volume-glusterfs)](https://goreportcard.com/report/github.com/urbitechsro/docker-volume-glusterfs) ![Docker Pulls](https://img.shields.io/docker/pulls/urbitechsro/glusterfs) ![Docker Stars](https://img.shields.io/docker/stars/urbitechsro/glusterfs)
+[![Go Report Card](https://goreportcard.com/badge/github.com/urbitechsro/docker-volume-glusterfs)](https://goreportcard.com/report/github.com/urbitechsro/docker-volume-glusterfs) ![Docker Pulls](https://img.shields.io/docker/pulls/urbitech/glusterfs) ![Docker Stars](https://img.shields.io/docker/stars/urbitech/glusterfs)
 
 ## Usage
 
 1 - Install the plugin
 
 ```
-docker plugin install --alias glusterfs urbitechsro/glusterfs:latest
+docker plugin install --alias glusterfs urbitech/glusterfs:latest
 
 # optional you can set a default server list and/or volume
-docker plugin install --alias glusterfs urbitechsro/glusterfs SERVERS=<server1,server2,...,serverN> VOLNAME=<volname>
+docker plugin install --alias glusterfs urbitech/glusterfs SERVERS=<server1,server2,...,serverN> VOLNAME=<volname>
 
 # or to enable debug
-docker plugin install --alias glusterfs urbitechsro/glusterfs DEBUG=1
+docker plugin install --alias glusterfs urbitech/glusterfs DEBUG=1
 ```
 
 2 - Create a volume
