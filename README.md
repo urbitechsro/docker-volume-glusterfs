@@ -64,13 +64,9 @@ For additional options see [man mount.glusterfs](https://github.com/gluster/glus
 
 ## Supported tags and respective `Dockerfile` links
 
-- urbitechsro/glusterfs:latest -> urbitechsro/glusterfs:9
-- [urbitechsro/glusterfs:9](https://github.com/urbitechsro/docker-volume-glusterfs/blob/glusterfs-9/Dockerfile) (Ubuntu 20.04)
-- [urbitechsro/glusterfs:8](https://github.com/urbitechsro/docker-volume-glusterfs/blob/glusterfs-8/Dockerfile) (Ubuntu 20.04)
-- [urbitechsro/glusterfs:7](https://github.com/urbitechsro/docker-volume-glusterfs/blob/glusterfs-7/Dockerfile) (Ubuntu 20.04)
-- [urbitechsro/glusterfs:6](https://github.com/urbitechsro/docker-volume-glusterfs/blob/glusterfs-6/Dockerfile) (Ubuntu 20.04)
-- [urbitechsro/glusterfs:1.1.0](https://github.com/urbitechsro/docker-volume-glusterfs/blob/4af73f9ba63e816958f25a2bddf5665f6c859fe9/Dockerfile) (Ubuntu 18.04)
-- [urbitechsro/glusterfs:1.0.0](https://github.com/urbitechsro/docker-volume-glusterfs/blob/4af73f9ba63e816958f25a2bddf5665f6c859fe9/Dockerfile) (Ubuntu 18.04)
+- urbitech/glusterfs:latest -> urbitech/glusterfs:9
+- [urbitech/glusterfs:9](https://hub.docker.com/r/urbitech/glusterfs/tags?page=1&ordering=last_updated) (Ubuntu 20.04)
+- [urbitech/glusterfs:8](https://hub.docker.com/r/urbitech/glusterfs/tags?page=1&ordering=last_updated) (Ubuntu 20.04)
 
 ## TODO
 
