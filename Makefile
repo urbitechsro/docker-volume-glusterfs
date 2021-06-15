@@ -11,7 +11,7 @@ clean:
 
 rootfs:
 	@echo "### docker build: rootfs image with docker-volume-glusterfs"
-	@docker build -q -t ${PLUGIN_NAME}:rootfs .
+	@docker build --build-arg glusterfs_version=${GLUSTERFS_VERSION} -q -t ${PLUGIN_NAME}:rootfs .
 	@echo "### create rootfs directory in ./plugin/rootfs"
 	@mkdir -p ./plugin/rootfs
 	@docker create --name tmp ${PLUGIN_NAME}:rootfs

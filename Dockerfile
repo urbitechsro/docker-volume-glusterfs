@@ -6,9 +6,12 @@ RUN go install --ldflags '-extldflags "-static"'
 CMD ["/go/bin/docker-volume-glusterfs"]
 
 FROM ubuntu:20.04
+
+ARG glusterfs_version
+
 RUN apt-get update \
   && apt-get install software-properties-common -y \
-  && add-apt-repository ppa:gluster/glusterfs-9 \
+  && add-apt-repository ppa:gluster/glusterfs-${glusterfs_version} \
   && apt-get update \
   && apt-get install glusterfs-client -y \
   && apt-get purge software-properties-common -y \
