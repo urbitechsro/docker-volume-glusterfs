@@ -64,7 +64,8 @@ For additional options see [man mount.glusterfs](https://github.com/gluster/glus
 
 ## Supported tags and respective `Dockerfile` links
 
-- urbitech/glusterfs:latest -> urbitech/glusterfs:9
+- urbitech/glusterfs:latest -> urbitech/glusterfs:10
+- [urbitech/glusterfs:10](https://hub.docker.com/r/urbitech/glusterfs/tags?page=1&ordering=last_updated) (Ubuntu 20.04)
 - [urbitech/glusterfs:9](https://hub.docker.com/r/urbitech/glusterfs/tags?page=1&ordering=last_updated) (Ubuntu 20.04)
 - [urbitech/glusterfs:8](https://hub.docker.com/r/urbitech/glusterfs/tags?page=1&ordering=last_updated) (Ubuntu 20.04)
 
