@@ -168,7 +168,11 @@ func (d *glusterfsDriver) Remove(r *volume.RemoveRequest) error {
 	empty, err := IsDirEmpty(v.Mountpoint)
 
 	if !empty || err != nil {
-		return logError("Directory for volume %s where the volume is mounted is not empty. This would result in complete removal of all data. Please stop all containers that mount the same volume and subdirectory and try again.", r.Name)
+		return logError(
+			"Directory for volume %s where the volume is mounted is not empty. "+
+				"This would result in complete removal of all data. Please stop all "+
+				"containers that mount the same volume and subdirectory and try again.",
+			r.Name)
 	}
 
 	if err := os.RemoveAll(v.Mountpoint); err != nil {
